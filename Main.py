@@ -38,7 +38,7 @@ subnet_mask = get_subnet_mask()
 deafult_gateway_IPv4 = get_default_gateway_IPv4()
 deafult_gateway_IPv6 = get_default_gateway_IPv6()
 
-webhook_url = "https://discord.com/api/webhooks/1193574121217478738/Z8QvpRmZ9OEghut0VIYptffgg8hO99GzBhVew-kP887ESnoDKmosg3ua-BZ-zlC5ocC_"
+webhook_url = ""
 
 payload = {
     "content": f"@everyone\nIPv6 Address = {IPv6}\nLink-local IPv6 Address = {Link_local_IPv6}\nIPv4 Address = {IPv4}\nSubnet Mask = {subnet_mask}\nDeafult Gateway IPv6 = {deafult_gateway_IPv6}\nDeafult Gateway IPv4 = {deafult_gateway_IPv4}"
